@@ -48,8 +48,8 @@ body {
 
 /* Text over the video */ 
 .Video_Text { 
-	background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
-	color: white; 
+	background: rgb(48, 67, 107, .5); /* This provides a semi-transparent background for the text to sit over */
+	color:  rgb(223, 238, 247); 
 	width: 100%;
 	padding: 20px; /* This adds padding around the text so that the background goes slightly beyond the text */
 	margin-top: 23%;
@@ -66,7 +66,7 @@ body {
 	padding: 10px; 
 	padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
 	height: 400px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
-	background-color: #f2f2f2; 
+	background-color: #cddfe2; 
 }
 
 .Column_2 {
@@ -75,7 +75,7 @@ body {
 	padding: 10px;
 	padding-top: 1.9%;
 	height: 400px;
-	background-color: #4d4d4d;
+	background-color: rgb(48, 67, 107, .5);
 }
 
 .Column_3 {
@@ -84,7 +84,11 @@ body {
 	padding: 10px;
 	padding-top: 3.5%;
 	height: 450px;
-	background-color: #4d4d4d;
+	background-color: rgb(48, 67, 107, .5);
+}
+
+.Row{
+	background-color: rgb(48, 67, 107, .5);
 }
 
 .Row:after { /* This inserts something after the content of selected elements */
@@ -96,7 +100,7 @@ body {
 /* Heading 1 elements */
 h1 {
 	text-transform: uppercase; /* We are capitalizing our headings */
-	font-family: "Trebuchet MS", Optima; 
+	font-family: Sans-serif, Optima; 
 	text-align: center;
 	margin-top: 3%; /* We are adding a small margin above the headings */
 	color: #1a1a1a;
@@ -104,7 +108,7 @@ h1 {
 
 /* Paragraph elements */
 p {
-	font-family: Perpetua, Rockwell Extra Bold;
+	font-family:  Perpetua, Rockwell Extra Bold;
 	text-align: justify;
 	letter-spacing: 1px; /* This expands the text slightly */
 	font-size: 20px;
@@ -114,10 +118,10 @@ p {
 
 /* Center align elements - this embraces all centered text */
 center {
-	font-family: Perpetua, Rockwell Extra Bold;
+	font-family: Bookman, Perpetua, Rockwell Extra Bold;
 	text-align: center;
 	letter-spacing: 1px;
-	font-size: 20px;
+	font-size: 21px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
