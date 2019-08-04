@@ -105,7 +105,7 @@ function getReceipt() {
     
     if (totalMeat > 0){
         totalMeat = totalMeat - 1;
-    }
+    }   
     if (swm == 1){
         text2=text2+T2+"$"+totalMeat+".00"+T3;
     }
