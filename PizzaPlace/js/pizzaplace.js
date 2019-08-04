@@ -87,11 +87,13 @@ function getReceipt() {
     }
 
     var meatArray = document.getElementsByClassName("meat");
+    var swm = 0;
     totalMeat = 0;
     for (var i = 0; i < meatArray.length; i++) {
 		if (meatArray[i].checked) {
             var selectedMeat = meatArray[i].value;
             totalMeat = totalMeat + 1;
+            swm = 1;
             text1 = text1+selectedMeat+"<br>";
             if (totalMeat < 2) {
                 text2=text2+T1+selectedMeat;
@@ -100,20 +102,23 @@ function getReceipt() {
             } 
         }
     }
-    if (totalMeat != 0){
-    text2=text2+T2+"$"+totalMeat+".00"+T3;
-    }
+    
     if (totalMeat > 0){
         totalMeat = totalMeat - 1;
+    }
+    if (swm == 1){
+        text2=text2+T2+"$"+totalMeat+".00"+T3;
     }
     Total = Total + totalMeat; 
     
     var vegsArray = document.getElementsByClassName("vegs");
+    swv = 0;
     totalVegs = 0;
     for (var i = 0; i < vegsArray.length; i++) {
 		if (vegsArray[i].checked) {
             var selectedVegs = vegsArray[i].value;
             totalVegs = totalVegs + 1;
+            swv = 1;
             text1 = text1+selectedVegs+"<br>";
             if (totalVegs < 2) {
                 text2=text2+T1+selectedVegs;
@@ -123,11 +128,12 @@ function getReceipt() {
 		}
     }
     
-    if (totalVegs != 0){
-        text2=text2+T2+"$"+totalVegs+".00"+T3;
-        }
+    
     if (totalVegs > 0){
         totalVegs = totalVegs - 1;
+    }
+    if (swv == 1){
+        text2=text2+T2+"$"+totalVegs+".00"+T3;
     }
     Total = Total + totalVegs;
    
