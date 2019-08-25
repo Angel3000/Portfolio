@@ -47,7 +47,15 @@ If @Tdate is null
    Select @TDate = Cast(SysDateTime() As Date);
  End;
 /* */
-
+Select  B4.Title, B1.Name, B1.Addres
+ From lib.Borrower B1
+	Inner Join lib.Book_Loans B2
+		On B2.CardNo = B1.CardNo
+	Inner Join lib.Library_Branch B3
+		On B3.BranchID = B2.BranchID 
+	Inner Join lib.Books B4
+		On B4.BookID = B2.BookID 
+ Where B3.BranchName = @Branch and B2.DateDue = @Tdate
 
 /* Books loaned by each library */
 Create Procedure lib.uspBooksOut
